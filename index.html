@@ -28,7 +28,7 @@
     <div class="container my-4">
         <div class="row">
             <div class="col-12">
-            <h1>Hello from Yusuf</h1>
+                <h1>Hello from Yusuf</h1>
             </div>
             <div class="col-4">
                 <canvas id="myChart"></canvas>
@@ -36,8 +36,11 @@
             <div class="col-4">
                 <canvas id="myChart2" Height="300"></canvas>
             </div>
+            <div class="col-4">
+                <canvas id="myChart3" Height="300"></canvas>
+            </div>
         </div>
-  </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -58,7 +61,7 @@
             }
         });
     </script>
-    
+
     <script>
         const ctx2 = document.getElementById('myChart2');
 
@@ -71,6 +74,31 @@
                     data: [38, 14, 7, 11, 29, 0, 1],
                     borderWidth: 1
                 }]
+            },
+            options: {
+            }
+        });
+    </script>
+
+    <script>
+        const ctx3 = document.getElementById('myChart3');
+
+        new Chart(ctx3, {
+            type: 'line',
+            data: {
+                labels: ['2020', '2021', '2022', '2023', '2024',],
+                datasets: [
+                    {
+                        label: 'Revenue (in Millions)',
+                        data: [420, 383, 414, 450, 444],
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Expense (in Millions)',
+                        data: [405, 362, 393, 429, 421],
+                        borderWidth: 1
+                    }    
+                ]
             },
             options: {
             }
